@@ -1,0 +1,284 @@
+# =========================
+# EASY LEVEL (1–10)
+# =========================
+
+# Q1: Print a 5x5 grid of numbers
+for i in range(5):
+    for j in range(1, 6):
+        print(j, end="")
+    print()
+
+# Q2: Print multiplication table from 1 to 3
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(i*j, end="")
+    print()
+
+# Q3: Print triangle but skip number 2 using continue
+for i in range(1, 5):
+    for j in range(1, i+1):
+        if j == 2:
+            continue
+        print(j, end="")
+    print()
+
+# Q4: Print numbers 1 to 5 but stop completely if number 4 appears
+for i in range(1, 6):
+    if i == 4:
+        break
+    print(i, end="")
+
+# Q5: Nested loop: Stop inner loop when j == 3
+for i in range(3):
+    for j in range(1, 6):
+        if j == 3:
+            break
+        print(j, end="")
+    print()
+
+# Q6: Skip printing even numbers inside nested loop
+for i in range(1, 4):
+    for j in range(1, 6):
+        if j % 2 == 0:
+            continue
+        print(j, end="")
+    print()
+
+# Q7: Print pattern but skip middle row using continue
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print("*"*i)
+
+# Q8: Search for number in 2D grid; break when found
+grid = [[1,2,3],[4,5,6],[7,8,9]]
+target = 5
+found = False
+for row in grid:
+    for num in row:
+        if num == target:
+            print("Found:", num)
+            found = True
+            break
+    if found:
+        break
+
+# Q9: Print numbers but use pass when number is 5
+for i in range(1, 6):
+    if i == 5:
+        pass
+    print(i, end="")
+
+# Q10: Print 3x3 matrix but break outer loop if i == 3
+for i in range(1, 4):
+    if i == 3:
+        break
+    for j in range(1, 4):
+        print(i, j, end=" ")
+    print()
+
+
+# =========================
+# MEDIUM LEVEL (11–20)
+# =========================
+
+# Q11: Print prime numbers from 1 to 20 using nested loops
+for num in range(2, 21):
+    is_prime = True
+    for i in range(2, num):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(num, end=" ")
+
+# Q12: Multiplication table but skip multiples of 5
+for i in range(1, 6):
+    for j in range(1, 6):
+        if (i*j) % 5 == 0:
+            continue
+        print(i*j, end=" ")
+    print()
+
+# Q13: Print square pattern but stop if user enters 0
+N = int(input("Enter N (0 to stop): "))
+if N != 0:
+    for i in range(N):
+        for j in range(N):
+            print("*", end="")
+        print()
+
+# Q14: Nested loop: Print coordinates (i, j). Break if i == j
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f"({i},{j})", end=" ")
+        if i == j:
+            break
+    print()
+
+# Q15: Print pyramid but skip printing star when column equals center
+N = 5
+for i in range(1, N+1):
+    for j in range(1, 2*i):
+        if j == i:
+            continue
+        print("*", end="")
+    print()
+
+# Q16: Search for a character in a string grid
+grid = [["a","b"],["c","d"]]
+target = "c"
+found = False
+for row in grid:
+    for ch in row:
+        if ch == target:
+            print("Found:", ch)
+            found = True
+            break
+    if found:
+        break
+
+# Q17: Print 5x5 pattern but skip border elements
+for i in range(5):
+    for j in range(5):
+        if i == 0 or i == 4 or j == 0 or j == 4:
+            continue
+        print("*", end="")
+    print()
+
+# Q18: Password retry system (3 attempts)
+password = "python123"
+for attempt in range(3):
+    entered = input("Enter password: ")
+    if entered == password:
+        print("Access Granted")
+        break
+    else:
+        print("Wrong password")
+
+# Q19: Print triangle but use pass when number divisible by 4
+for i in range(1, 6):
+    for j in range(1, i+1):
+        if j % 4 == 0:
+            pass
+        print(j, end="")
+    print()
+
+# Q20: Print matrix but break outer loop if sum of row exceeds 10
+matrix = [[2,3,4],[5,6,7],[8,9,10]]
+for row in matrix:
+    if sum(row) > 10:
+        break
+    print(row)
+
+
+# =========================
+# HARD LEVEL (21–30)
+# =========================
+
+# Q21: Prime Pattern (1–50)
+for num in range(1, 51):
+    if num < 2:
+        continue
+    is_prime = True
+    for i in range(2, num):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(num, end=" ")
+
+# Q22: FizzBuzz Grid (1–25 in 5x5)
+for i in range(1, 26):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz", end=" ")
+        continue
+    elif i % 3 == 0:
+        print("Fizz", end=" ")
+        continue
+    elif i % 5 == 0:
+        print("Buzz", end=" ")
+        continue
+    else:
+        print(i, end=" ")
+    if i % 5 == 0:
+        print()
+
+# Q23: Triangle pattern but stop entire program when row == 4
+for i in range(1, 6):
+    if i == 4:
+        break
+    print("*"*i)
+
+# Q24: Nested loop login system
+password = "python123"
+for attempt in range(3):
+    entered = input("Enter password: ")
+    if len(entered) < 5:
+        print("Too short")
+        continue
+    if entered == password:
+        print("Access Granted")
+        break
+    else:
+        print("Wrong password")
+
+# Q25: Print multiplication matrix but skip diagonal elements
+N = 3
+for i in range(1, N+1):
+    for j in range(1, N+1):
+        if i == j:
+            continue
+        print(i*j, end=" ")
+    print()
+
+# Q26: Find first pair (i, j) such that i*j == target
+target = 12
+found = False
+for i in range(1, 11):
+    for j in range(1, 11):
+        if i*j == target:
+            print("Pair:", i, j)
+            found = True
+            break
+    if found:
+        break
+
+# Q27: Print diamond pattern but skip center line
+N = 4
+for i in range(1, N+1):
+    if i == N:
+        continue
+    print(" "*(N-i) + "*"*(2*i-1))
+for i in range(N-1, 0, -1):
+    print(" "*(N-i) + "*"*(2*i-1))
+
+# Q28: Print 1–100 grid 10x10. Stop if number 57 appears.
+for i in range(1, 101):
+    if i == 57:
+        break
+    print(i, end=" ")
+    if i % 10 == 0:
+        print()
+
+# Q29: Generate all pairs from two lists. Skip pairs where sum is even.
+list1 = [1,2,3]
+list2 = [4,5,6]
+for i in list1:
+    for j in list2:
+        if (i+j) % 2 == 0:
+            continue
+        print(i, j)
+
+# Q30: Simulated ATM system
+balance = 1000
+while True:
+    print("\nMenu:\n1. Withdraw\n2. Check Balance\n3. Exit")
+    choice = int(input("Enter choice: "))
+    if choice == 3:
+        print("Exiting...")
+        break
+    elif choice == 1:
+        amt = int(input("Enter amount: "))
+        if amt <= balance:
+           

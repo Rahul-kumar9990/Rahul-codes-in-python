@@ -1,0 +1,156 @@
+ =========================
+# ADVANCED LOGIC PRACTICE (36–50)
+# =========================
+
+# Q36: FizzBuzz logic.
+num = int(input("Enter a number: "))
+if num % 3 == 0 and num % 5 == 0:
+    print("FizzBuzz")
+elif num % 3 == 0:
+    print("Fizz")
+elif num % 5 == 0:
+    print("Buzz")
+else:
+    print(num)
+
+# Q37: Take age and gender and check special ticket discount eligibility.
+age = int(input("Enter age: "))
+gender = input("Enter gender (M/F): ").upper()
+if gender == "F" or age >= 60:
+    print("Eligible for Discount")
+else:
+    print("Not Eligible")
+
+# Q38: Take salary and experience and classify promotion eligibility.
+salary = int(input("Enter salary: "))
+experience = int(input("Enter years of experience: "))
+if salary > 50000 and experience >= 5:
+    print("Eligible for Promotion")
+else:
+    print("Not Eligible")
+
+# Q39: Take two numbers and check if both are positive, both negative, or mixed.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+if a > 0 and b > 0:
+    print("Both Positive")
+elif a < 0 and b < 0:
+    print("Both Negative")
+else:
+    print("Mixed")
+
+# Q40: Take number and check if it lies in ranges.
+num = int(input("Enter a number: "))
+if 0 <= num <= 50:
+    print("Range: 0–50")
+elif 51 <= num <= 100:
+    print("Range: 51–100")
+elif 101 <= num <= 200:
+    print("Range: 101–200")
+else:
+    print("Above 200")
+
+# Q41: Take character input and check uppercase, lowercase, digit, or special character.
+ch = input("Enter a character: ")
+if ch.isupper():
+    print("Uppercase")
+elif ch.islower():
+    print("Lowercase")
+elif ch.isdigit():
+    print("Digit")
+else:
+    print("Special Character")
+
+# Q42: Take three sides and check triangle type.
+a = int(input("Enter side a: "))
+b = int(input("Enter side b: "))
+c = int(input("Enter side c: "))
+if a == b == c:
+    print("Equilateral Triangle")
+elif a == b or b == c or a == c:
+    print("Isosceles Triangle")
+else:
+    print("Scalene Triangle")
+
+# Q43: Take a number and check Armstrong number (3-digit).
+num = int(input("Enter a 3-digit number: "))
+sum_of_cubes = 0
+temp = num
+while temp > 0:
+    digit = temp % 10
+    sum_of_cubes += digit ** 3
+    temp //= 10
+if sum_of_cubes == num:
+    print("Armstrong Number")
+else:
+    print("Not Armstrong Number")
+
+# Q44: Take balance and withdrawal amount. Check if transaction is allowed.
+balance = float(input("Enter balance: "))
+withdraw = float(input("Enter withdrawal amount: "))
+if withdraw <= balance:
+    print("Transaction Allowed")
+else:
+    print("Insufficient Balance")
+
+# Q45: Take score and print performance message.
+score = int(input("Enter score: "))
+if score >= 90:
+    print("Excellent Performance")
+elif score >= 70:
+    print("Good Performance")
+elif score >= 50:
+    print("Average Performance")
+else:
+    print("Poor Performance")
+
+# Q46: Take age and check insurance premium category.
+age = int(input("Enter age: "))
+if age < 25:
+    print("High Premium")
+elif 25 <= age <= 40:
+    print("Medium Premium")
+else:
+    print("Low Premium")
+
+# Q47: Take two numbers and check if they are both even, both odd, or mixed.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+if a % 2 == 0 and b % 2 == 0:
+    print("Both Even")
+elif a % 2 != 0 and b % 2 != 0:
+    print("Both Odd")
+else:
+    print("Mixed")
+
+# Q48: Take time in hours and print Morning, Afternoon, Evening, Night.
+hour = int(input("Enter hour (0-23): "))
+if 5 <= hour < 12:
+    print("Morning")
+elif 12 <= hour < 17:
+    print("Afternoon")
+elif 17 <= hour < 21:
+    print("Evening")
+else:
+    print("Night")
+
+# Q49: Take product price and customer type (regular/premium) and calculate discount.
+price = float(input("Enter product price: "))
+customer = input("Enter customer type (regular/premium): ").lower()
+if customer == "premium":
+    discount = price * 0.20
+else:
+    discount = price * 0.10
+final_price = price - discount
+print("Final Price after discount:", final_price)
+
+# Q50: Take a number and check ranges (<0, between 0–100, >100, exactly 100).
+num = int(input("Enter a number: "))
+if num < 0:
+    print("Less than 0")
+elif num == 100:
+    print("Exactly 100")
+elif 0 <= num < 100:
+    print("Between 0 and 100")
+else:
+    print("Greater than 100")

@@ -1,0 +1,366 @@
+# =========================
+# EASY LEVEL (1–10)
+# =========================
+
+# Q1: Print Numbers from 1 to N
+# Problem: Given an integer N, print numbers from 1 to N using a for loop.
+N = int(input("Enter N: "))
+for i in range(1, N+1):
+    print(i, end=" ")
+
+# Q2: Sum of First N Numbers
+# Problem: Compute the sum of numbers from 1 to N.
+N = int(input("\nEnter N: "))
+total = 0
+for i in range(1, N+1):
+    total += i
+print("Sum:", total)
+
+# Q3: Multiplication Table
+# Problem: Print multiplication table of N up to 10.
+N = int(input("Enter N: "))
+for i in range(1, 11):
+    print(f"{N} x {i} = {N*i}")
+
+# Q4: Count Even Numbers
+# Problem: Count how many even numbers exist between 1 and N.
+N = int(input("Enter N: "))
+count = 0
+for i in range(1, N+1):
+    if i % 2 == 0:
+        count += 1
+print("Even count:", count)
+
+# Q5: Reverse Counting
+# Problem: Print numbers from N down to 1.
+N = int(input("Enter N: "))
+for i in range(N, 0, -1):
+    print(i, end=" ")
+
+# Q6: Square Series
+# Problem: Print squares of numbers from 1 to N.
+N = int(input("\nEnter N: "))
+for i in range(1, N+1):
+    print(i*i, end=" ")
+
+# Q7: Count Digits
+# Problem: Count how many digits an integer N contains.
+N = int(input("\nEnter N: "))
+count = 0
+for digit in str(N):
+    count += 1
+print("Digit count:", count)
+
+# Q8: Sum of Digits
+# Problem: Find sum of digits of N.
+N = int(input("Enter N: "))
+sum_digits = 0
+for digit in str(N):
+    sum_digits += int(digit)
+print("Sum of digits:", sum_digits)
+
+# Q9: Count Vowels
+# Problem: Count number of vowels in a string S.
+S = input("Enter string: ").lower()
+count = 0
+for ch in S:
+    if ch in "aeiou":
+        count += 1
+print("Vowel count:", count)
+
+# Q10: Factorial
+# Problem: Compute factorial of N using loop.
+N = int(input("Enter N: "))
+fact = 1
+for i in range(1, N+1):
+    fact *= i
+print("Factorial:", fact)
+
+
+# =========================
+# MEDIUM LEVEL (11–20)
+# =========================
+
+# Q11: Reverse a Number
+# Problem: Reverse digits of integer N.
+N = int(input("Enter N: "))
+rev = 0
+for digit in str(N):
+    rev = int(str(N)[::-1])
+print("Reversed:", rev)
+
+# Q12: Fibonacci Series
+# Problem: Print first N Fibonacci numbers.
+N = int(input("Enter N: "))
+a, b = 0, 1
+for i in range(N):
+    print(a, end=" ")
+    a, b = b, a+b
+
+# Q13: Prime Check
+# Problem: Determine if N is prime.
+N = int(input("\nEnter N: "))
+is_prime = True
+if N < 2:
+    is_prime = False
+else:
+    for i in range(2, int(N**0.5)+1):
+        if N % i == 0:
+            is_prime = False
+            break
+print("Prime:", is_prime)
+
+# Q14: Print All Factors
+# Problem: Print all factors of N.
+N = int(input("Enter N: "))
+for i in range(1, N+1):
+    if N % i == 0:
+        print(i, end=" ")
+
+# Q15: Largest Digit
+# Problem: Find largest digit in N.
+N = input("\nEnter N: ")
+largest = 0
+for digit in N:
+    if int(digit) > largest:
+        largest = int(digit)
+print("Largest digit:", largest)
+
+# Q16: Armstrong Number
+# Problem: Check whether N is an Armstrong number (3-digit).
+N = int(input("Enter N: "))
+sum_of_cubes = 0
+for digit in str(N):
+    sum_of_cubes += int(digit)**3
+print("Armstrong:", sum_of_cubes == N)
+
+# Q17: Count Uppercase and Lowercase
+# Problem: Count uppercase and lowercase characters in string S.
+S = input("Enter string: ")
+upper, lower = 0, 0
+for ch in S:
+    if ch.isupper():
+        upper += 1
+    elif ch.islower():
+        lower += 1
+print("Uppercase:", upper)
+print("Lowercase:", lower)
+
+# Q18: Sum of Even and Odd Separately
+# Problem: Compute sum of even and odd numbers from 1 to N separately.
+N = int(input("Enter N: "))
+sum_even, sum_odd = 0, 0
+for i in range(1, N+1):
+    if i % 2 == 0:
+        sum_even += i
+    else:
+        sum_odd += i
+print("Even sum:", sum_even)
+print("Odd sum:", sum_odd)
+
+# Q19: Pattern Printing – Increasing Stars
+# Problem: Print pattern of stars increasing each row.
+N = int(input("Enter N: "))
+for i in range(1, N+1):
+    print("*" * i)
+
+# Q20: Pattern – Number Triangle
+# Problem: Print number triangle.
+N = int(input("Enter N: "))
+for i in range(1, N+1):
+    for j in range(1, i+1):
+        print(j, end="")
+    print()
+
+
+# =========================
+# extra from other source
+# =========================
+
+# Q21: Palindrome Number
+# Problem: Check if integer N is a palindrome.
+N = int(input("Enter N: "))
+rev = str(N)[::-1]   # reverse string form
+if str(N) == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+# Q22: Perfect Number
+# Problem: Check if N is a perfect number (sum of divisors = N).
+N = int(input("Enter N: "))
+sum_div = 0
+for i in range(1, N):
+    if N % i == 0:
+        sum_div += i
+print("Perfect Number" if sum_div == N else "Not Perfect Number")
+
+# Q23: Strong Number
+# Problem: Check if N is a strong number (sum of factorial of digits = N).
+N = int(input("Enter N: "))
+sum_fact = 0
+for digit in str(N):
+    fact = 1
+    for i in range(1, int(digit)+1):
+        fact *= i
+    sum_fact += fact
+print("Strong Number" if sum_fact == N else "Not Strong Number")
+
+# Q24: Sum of Series (1^2 + 2^2 + ... + N^2)
+# Problem: Compute sum of squares up to N.
+N = int(input("Enter N: "))
+total = 0
+for i in range(1, N+1):
+    total += i*i
+print("Sum of squares:", total)
+
+# Q25: Sum of Series (1^3 + 2^3 + ... + N^3)
+# Problem: Compute sum of cubes up to N.
+N = int(input("Enter N: "))
+total = 0
+for i in range(1, N+1):
+    total += i**3
+print("Sum of cubes:", total)
+
+# Q26: GCD of Two Numbers
+# Problem: Find GCD using loop.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+gcd = 1
+for i in range(1, min(a, b)+1):
+    if a % i == 0 and b % i == 0:
+        gcd = i
+print("GCD:", gcd)
+
+# Q27: LCM of Two Numbers
+# Problem: Find LCM using loop.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+lcm = max(a, b)
+while True:
+    if lcm % a == 0 and lcm % b == 0:
+        break
+    lcm += 1
+print("LCM:", lcm)
+
+# Q28: Pattern – Pyramid of Stars
+# Problem: Print pyramid of stars.
+N = int(input("Enter N: "))
+for i in range(1, N+1):
+    print(" "*(N-i) + "*"*(2*i-1))
+
+# Q29: Pattern – Inverted Pyramid
+# Problem: Print inverted pyramid of stars.
+N = int(input("Enter N: "))
+for i in range(N, 0, -1):
+    print(" "*(N-i) + "*"*(2*i-1))
+
+# Q30: Pattern – Floyd’s Triangle
+# Problem: Print Floyd’s triangle with numbers.
+N = int(input("Enter N: "))
+num = 1
+for i in range(1, N+1):
+    for j in range(1, i+1):
+        print(num, end=" ")
+        num += 1
+    print()
+
+
+# =========================
+# HARD LEVEL (21–30)
+# =========================
+
+# Q21: Print All Primes up to N
+# Problem: Print all prime numbers between 1 and N.
+N = int(input("Enter N: "))
+for num in range(2, N+1):
+    is_prime = True
+    for i in range(2, int(num**0.5)+1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(num, end=" ")
+
+# Q22: Palindrome Number
+# Problem: Check whether N is palindrome.
+N = int(input("\nEnter N: "))
+if str(N) == str(N)[::-1]:
+    print("True")
+else:
+    print("False")
+
+# Q23: Perfect Number
+# Problem: Check whether N is perfect (sum of proper divisors equals number).
+N = int(input("Enter N: "))
+sum_div = 0
+for i in range(1, N):
+    if N % i == 0:
+        sum_div += i
+print("True" if sum_div == N else "False")
+
+# Q24: Strong Number
+# Problem: Check if N is Strong number (sum of factorial of digits equals number).
+N = int(input("Enter N: "))
+sum_fact = 0
+for digit in str(N):
+    fact = 1
+    for i in range(1, int(digit)+1):
+        fact *= i
+    sum_fact += fact
+print("True" if sum_fact == N else "False")
+
+# Q25: Pyramid Pattern
+# Problem: Print a centered pyramid of stars of height N.
+N = int(input("Enter N: "))
+for i in range(1, N+1):
+    print(" "*(N-i) + "*"*(2*i-1))
+
+# Q26: Reverse Pyramid
+# Problem: Print an inverted centered pyramid of stars of height N.
+N = int(input("Enter N: "))
+for i in range(N, 0, -1):
+    print(" "*(N-i) + "*"*(2*i-1))
+
+# Q27: Number Palindrome Pattern
+# Problem: Print a number palindrome pyramid of height N.
+N = int(input("Enter N: "))
+for i in range(1, N+1):
+    # Left side increasing
+    for j in range(1, i+1):
+        print(j, end="")
+    # Right side decreasing
+    for j in range(i-1, 0, -1):
+        print(j, end="")
+    print()
+
+# Q28: Hollow Pyramid Pattern
+# Problem: Print a hollow pyramid of height N.
+N = int(input("Enter N: "))
+for i in range(1, N+1):
+    if i == N:
+        print("*"*(2*i-1))   # last row full stars
+    else:
+        print(" "*(N-i), end="")
+        for j in range(1, 2*i):
+            if j == 1 or j == 2*i-1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+# Q29: Right-Aligned Increasing Pattern
+# Problem: Print a right-aligned increasing star pattern of height N.
+N = int(input("Enter N: "))
+for i in range(1, N+1):
+    print(" "*(N-i) + "*"*i)
+
+# Q30: Diamond Pattern
+# Problem: Print a diamond pattern of height N.
+N = int(input("Enter N: "))
+# Upper pyramid
+for i in range(1, N+1):
+    print(" "*(N-i) + "*"*(2*i-1))
+# Lower inverted pyramid
+for i in range(N-1, 0, -1):
+    print(" "*(N-i) + "*"*(2*i-1))

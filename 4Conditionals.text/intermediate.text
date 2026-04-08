@@ -1,0 +1,205 @@
+
+# =========================
+# INTERMEDIATE LEVEL (16–35)
+# =========================
+
+# Q16: Take three numbers and print the largest.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+if a >= b and a >= c:
+    print("Largest:", a)
+elif b >= a and b >= c:
+    print("Largest:", b)
+else:
+    print("Largest:", c)
+
+# Q17: Take three numbers and print the smallest.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+if a <= b and a <= c:
+    print("Smallest:", a)
+elif b <= a and b <= c:
+    print("Smallest:", b)
+else:
+    print("Smallest:", c)
+
+# Q18: Take a number and check if it is divisible by 2 and 3.
+num = int(input("Enter a number: "))
+if num % 2 == 0 and num % 3 == 0:
+    print("Divisible by both 2 and 3")
+else:
+    print("Not divisible by both")
+
+# Q19: Take number and classify Small (<10), Medium (10–100), Large (>100).
+num = int(input("Enter a number: "))
+if num < 10:
+    print("Small")
+elif 10 <= num <= 100:
+    print("Medium")
+else:
+    print("Large")
+
+# Q20: Take income and calculate tax.
+income = float(input("Enter income in Lakhs: "))
+if income < 2.5:
+    print("No Tax")
+elif 2.5 <= income <= 5:
+    print("Tax:", income * 0.05)
+elif 5 < income <= 10:
+    print("Tax:", income * 0.10)
+else:
+    print("Tax:", income * 0.20)
+
+# Q21: Take two numbers and check if one is multiple of another.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+if a % b == 0:
+    print(a, "is a multiple of", b)
+elif b % a == 0:
+    print(b, "is a multiple of", a)
+else:
+    print("Neither is a multiple of the other")
+
+# Q22: Take a string and classify Short (<5), Medium (5–10), Long (>10).
+s = input("Enter a string: ")
+if len(s) < 5:
+    print("Short")
+elif 5 <= len(s) <= 10:
+    print("Medium")
+else:
+    print("Long")
+
+# Q23: Take age and check voting eligibility (>=18).
+age = int(input("Enter age: "))
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
+
+# Q24: Take electricity units and calculate bill based on slab.
+units = int(input("Enter electricity units: "))
+if units <= 100:
+    bill = units * 5
+elif units <= 200:
+    bill = (100 * 5) + (units - 100) * 7
+else:
+    bill = (100 * 5) + (100 * 7) + (units - 200) * 10
+print("Bill:", bill)
+
+# Q25: Take basic salary and calculate bonus based on experience.
+salary = float(input("Enter basic salary: "))
+experience = int(input("Enter years of experience: "))
+if experience < 2:
+    bonus = salary * 0.05
+elif 2 <= experience <= 5:
+    bonus = salary * 0.10
+else:
+    bonus = salary * 0.20
+print("Bonus:", bonus)
+
+# Q26: Take a number and check if it is a perfect square.
+import math
+num = int(input("Enter a number: "))
+if math.isqrt(num) ** 2 == num:
+    print("Perfect Square")
+else:
+    print("Not a Perfect Square")
+
+# =========================
+# INTERMEDIATE LEVEL (continued)
+# =========================
+
+# Q27: Take day number (1–7) and print weekday name.
+day = int(input("Enter day number (1-7): "))
+if day == 1:
+    print("Monday")
+elif day == 2:
+    print("Tuesday")
+elif day == 3:
+    print("Wednesday")
+elif day == 4:
+    print("Thursday")
+elif day == 5:
+    print("Friday")
+elif day == 6:
+    print("Saturday")
+elif day == 7:
+    print("Sunday")
+else:
+    print("Invalid day number")
+
+# Q28: Take month number (1–12) and print month name.
+month = int(input("Enter month number (1-12): "))
+months = ["January","February","March","April","May","June",
+          "July","August","September","October","November","December"]
+if 1 <= month <= 12:
+    print("Month:", months[month-1])
+else:
+    print("Invalid month number")
+
+# Q29: Take a number and classify as Even positive, Even negative, Odd positive, Odd negative.
+num = int(input("Enter a number: "))
+if num % 2 == 0 and num > 0:
+    print("Even Positive")
+elif num % 2 == 0 and num < 0:
+    print("Even Negative")
+elif num % 2 != 0 and num > 0:
+    print("Odd Positive")
+else:
+    print("Odd Negative")
+
+# Q30: Take two strings and check if they are equal ignoring case.
+s1 = input("Enter first string: ").lower()
+s2 = input("Enter second string: ").lower()
+if s1 == s2:
+    print("Strings are equal")
+else:
+    print("Strings are not equal")
+
+# Q31: Take a float number and check if it is integer value or decimal.
+num = float(input("Enter a number: "))
+if num.is_integer():
+    print("Integer value")
+else:
+    print("Decimal value")
+
+# Q32: Take percentage and check scholarship eligibility.
+percentage = float(input("Enter percentage: "))
+if percentage >= 85:
+    print("Eligible for Scholarship")
+else:
+    print("Not Eligible")
+
+# Q33: Take two numbers and check if they form a right triangle (Pythagoras).
+a = int(input("Enter side a: "))
+b = int(input("Enter side b: "))
+c = int(input("Enter side c: "))
+sides = sorted([a, b, c])
+if sides[0]**2 + sides[1]**2 == sides[2]**2:
+    print("Right Triangle")
+else:
+    print("Not a Right Triangle")
+
+# Q34: Take speed and classify Slow (<30), Normal (30–70), Fast (>70).
+speed = int(input("Enter speed: "))
+if speed < 30:
+    print("Slow")
+elif 30 <= speed <= 70:
+    print("Normal")
+else:
+    print("Fast")
+
+# Q35: Take login attempts and print warning after 3 attempts.
+attempts = int(input("Enter number of login attempts: "))
+if attempts >= 3:
+    print("Warning: Too many attempts!")
+else:
+    print("Attempts allowed")
+
+
+ 
+    
+    
+

@@ -1,0 +1,196 @@
+# =========================
+# EASY LEVEL (1–10)
+# =========================
+
+# Q1: Reverse String
+s = "hello"
+print(s[::-1])
+
+# Q2: Palindrome Check
+s = "madam"
+print(s == s[::-1])
+
+# Q3: Count Vowels
+s = "hello"
+count = sum(1 for ch in s if ch.lower() in "aeiou")
+print(count)
+
+# Q4: Count Consonants
+s = "hello"
+count = sum(1 for ch in s if ch.isalpha() and ch.lower() not in "aeiou")
+print(count)
+
+# Q5: Count Spaces
+s = "hello world"
+print(s.count(" "))
+
+# Q6: Convert to Uppercase
+s = "python"
+print(s.upper())
+
+# Q7: Convert to Lowercase
+s = "PYTHON"
+print(s.lower())
+
+# Q8: Character Frequency
+s = "banana"
+c = "a"
+print(s.count(c))
+
+# Q9: Remove Spaces
+s = "a b c"
+print(s.replace(" ", ""))
+
+# Q10: First Character
+s = "Python"
+print(s[0])
+
+
+# =========================
+# MEDIUM LEVEL (11–20)
+# =========================
+
+# Q11: Reverse Words
+s = "I love Python"
+words = s.split()
+print(" ".join(words[::-1]))
+
+# Q12: Anagram Check
+s1, s2 = "listen", "silent"
+print(sorted(s1) == sorted(s2))
+
+# Q13: Remove Duplicates
+s = "banana"
+result = ""
+for ch in s:
+    if ch not in result:
+        result += ch
+print(result)
+
+# Q14: Longest Word
+s = "I love programming"
+words = s.split()
+print(max(words, key=len))
+
+# Q15: Capitalize Words
+s = "hello world"
+print(s.title())
+
+# Q16: Count Uppercase & Lowercase
+s = "PyThOn"
+upper = sum(1 for ch in s if ch.isupper())
+lower = sum(1 for ch in s if ch.islower())
+print("Uppercase:", upper)
+print("Lowercase:", lower)
+
+# Q17: Replace Vowels
+s = "hello"
+result = ""
+for ch in s:
+    if ch.lower() in "aeiou":
+        result += "*"
+    else:
+        result += ch
+print(result)
+
+# Q18: Check Only Digits
+s = "12345"
+print(s.isdigit())
+
+# Q19: Find Index of Character
+s, c = "banana", "n"
+print(s.find(c))
+
+# Q20: Count Words
+s = "I love Python"
+print(len(s.split()))
+
+
+# =========================
+# HARD LEVEL (21–30)
+# =========================
+
+# Q21: String Compression
+s = "aaabbc"
+result = ""
+i = 0
+while i < len(s):
+    count = 1
+    while i+1 < len(s) and s[i] == s[i+1]:
+        count += 1
+        i += 1
+    result += s[i] + str(count)
+    i += 1
+print(result)
+
+# Q22: Longest Substring Without Repeating Characters
+s = "abcabcbb"
+seen, start, max_len = {}, 0, 0
+for i, ch in enumerate(s):
+    if ch in seen and seen[ch] >= start:
+        start = seen[ch] + 1
+    seen[ch] = i
+    max_len = max(max_len, i - start + 1)
+print(max_len)
+
+# Q23: Check Rotation
+s1, s2 = "abcd", "cdab"
+print(len(s1) == len(s2) and s2 in (s1+s1))
+
+# Q24: Print All Substrings
+s = "abc"
+for i in range(len(s)):
+    for j in range(i+1, len(s)+1):
+        print(s[i:j])
+
+# Q25: Count Substrings
+s = "abc"
+count = 0
+for i in range(len(s)):
+    for j in range(i+1, len(s)+1):
+        count += 1
+print(count)
+
+# Q26: Most Frequent Character
+s = "banana"
+freq = {}
+for ch in s:
+    freq[ch] = freq.get(ch, 0) + 1
+print(max(freq, key=freq.get))
+
+# Q27: Manual String to Integer
+s = "123"
+num = 0
+for ch in s:
+    num = num*10 + (ord(ch)-ord("0"))
+print(num)
+
+# Q28: Implement Split Function
+s, delimiter = "a,b,c", ","
+result, temp = [], ""
+for ch in s:
+    if ch == delimiter:
+        result.append(temp)
+        temp = ""
+    else:
+        temp += ch
+result.append(temp)
+print(result)
+
+# Q29: Check Balanced Parentheses
+s = "()()"
+stack = []
+balanced = True
+for ch in s:
+    if ch == "(":
+        stack.append(ch)
+    elif ch == ")":
+        if not stack:
+            balanced = False
+            break
+        stack.pop()
+print(balanced and not stack)
+
+# Q30: Substring Search
+s, target = "hello", "ll"
+print(s.find(target))

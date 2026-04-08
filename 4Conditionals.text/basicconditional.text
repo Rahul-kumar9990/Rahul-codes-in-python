@@ -1,0 +1,282 @@
+# =========================
+# BASIC LEVEL (1–15)
+# =========================
+
+# Q1: Take a number and check if it is positive, negative, or zero.
+num = int(input("Enter a number: "))
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+# Q2: Take a number and check if it is even or odd.
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+# Q3: Take age and print Child (<13), Teen (13–19), Adult (otherwise).
+age = int(input("Enter age: "))
+if age < 13:
+    print("Child")
+elif 13 <= age <= 19:
+    print("Teen")
+else:
+    print("Adult")
+
+# Q4: Take marks and classify Fail (<35), Pass (35–59), First Class (60–79), Distinction (80+).
+marks = int(input("Enter marks: "))
+if marks < 35:
+    print("Fail")
+elif 35 <= marks <= 59:
+    print("Pass")
+elif 60 <= marks <= 79:
+    print("First Class")
+else:
+    print("Distinction")
+
+# Q5: Take temperature and classify Cold (<15), Warm (15–30), Hot (>30).
+temp = float(input("Enter temperature: "))
+if temp < 15:
+    print("Cold")
+elif 15 <= temp <= 30:
+    print("Warm")
+else:
+    print("Hot")
+
+# Q6: Take salary and classify Low (<30000), Medium (30000–70000), High (>70000).
+salary = int(input("Enter salary: "))
+if salary < 30000:
+    print("Low")
+elif 30000 <= salary <= 70000:
+    print("Medium")
+else:
+    print("High")
+
+# Q7: Take a number and check divisibility by 3, 5, or both.
+num = int(input("Enter a number: "))
+if num % 3 == 0 and num % 5 == 0:
+    print("Divisible by both 3 and 5")
+elif num % 3 == 0:
+    print("Divisible by 3")
+elif num % 5 == 0:
+    print("Divisible by 5")
+else:
+    print("Not divisible by 3 or 5")
+
+# Q8: Take two numbers and print which one is greater or if equal.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+if a > b:
+    print("First number is greater")
+elif b > a:
+    print("Second number is greater")
+else:
+    print("Both are equal")
+
+# Q9: Take a character and check if it is a vowel or consonant.
+ch = input("Enter a character: ").lower()
+if ch in ['a', 'e', 'i', 'o', 'u']:
+    print("Vowel")
+else:
+    print("Consonant")
+
+# Q10: Take a year and check if it is leap year or not.
+year = int(input("Enter year: "))
+if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+    print("Leap Year")
+else:
+    print("Not a Leap Year")
+
+# Q11: Take a number and check if it is 1-digit, 2-digit, or 3-digit.
+num = int(input("Enter a number: "))
+if 0 <= num <= 9:
+    print("1-digit number")
+elif 10 <= num <= 99:
+    print("2-digit number")
+elif 100 <= num <= 999:
+    print("3-digit number")
+else:
+    print("More than 3 digits")
+
+# Q12: Take exam score and print grade (A, B, C, D, F).
+score = int(input("Enter exam score: "))
+if score >= 90:
+    print("Grade A")
+elif score >= 75:
+    print("Grade B")
+elif score >= 60:
+    print("Grade C")
+elif score >= 40:
+    print("Grade D")
+else:
+    print("Grade F")
+
+# Q13: Take a number and check if it lies between 10 and 50.
+num = int(input("Enter a number: "))
+if 10 <= num <= 50:
+    print("Number lies between 10 and 50")
+else:
+    print("Number is outside the range")
+
+# Q14: Take username and check admin/guest/invalid.
+username = input("Enter username: ")
+if username == "admin":
+    print("Admin Access")
+elif username == "guest":
+    print("Guest Access")
+else:
+    print("Invalid User")
+
+# Q15: Take password and check if it matches "python123".
+password = input("Enter password: ")
+if password == "python123":
+    print("Access Granted")
+else:
+    print("Access Denied")
+
+
+# # =========================
+# BASIC LEVEL (1–15)
+# =========================
+
+# Q1: Take a number and check if it is positive, negative, or zero.
+num = int(input("Enter a number: "))
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+# Q2: Take a number and check if it is even or odd.
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+# Q3: Take age and print Child (<13), Teen (13–19), Adult (otherwise).
+age = int(input("Enter age: "))
+if age < 13:
+    print("Child")
+elif 13 <= age <= 19:
+    print("Teen")
+else:
+    print("Adult")
+
+# Q4: Take marks and classify Fail (<35), Pass (35–59), First Class (60–79), Distinction (80+).
+marks = int(input("Enter marks: "))
+if marks < 35:
+    print("Fail")
+elif 35 <= marks <= 59:
+    print("Pass")
+elif 60 <= marks <= 79:
+    print("First Class")
+else:
+    print("Distinction")
+
+# Q5: Take temperature and classify Cold (<15), Warm (15–30), Hot (>30).
+temp = float(input("Enter temperature: "))
+if temp < 15:
+    print("Cold")
+elif 15 <= temp <= 30:
+    print("Warm")
+else:
+    print("Hot")
+
+# Q6: Take salary and classify Low (<30000), Medium (30000–70000), High (>70000).
+salary = int(input("Enter salary: "))
+if salary < 30000:
+    print("Low")
+elif 30000 <= salary <= 70000:
+    print("Medium")
+else:
+    print("High")
+
+# Q7: Take a number and check divisibility by 3, 5, or both.
+num = int(input("Enter a number: "))
+if num % 3 == 0 and num % 5 == 0:
+    print("Divisible by both 3 and 5")
+elif num % 3 == 0:
+    print("Divisible by 3")
+elif num % 5 == 0:
+    print("Divisible by 5")
+else:
+    print("Not divisible by 3 or 5")
+
+# Q8: Take two numbers and print which one is greater or if equal.
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+if a > b:
+    print("First number is greater")
+elif b > a:
+    print("Second number is greater")
+else:
+    print("Both are equal")
+
+# Q9: Take a character and check if it is a vowel or consonant.
+ch = input("Enter a character: ").lower()
+if ch in ['a', 'e', 'i', 'o', 'u']:
+    print("Vowel")
+else:
+    print("Consonant")
+
+# Q10: Take a year and check if it is leap year or not.
+year = int(input("Enter year: "))
+if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+    print("Leap Year")
+else:
+    print("Not a Leap Year")
+
+# Q11: Take a number and check if it is 1-digit, 2-digit, or 3-digit.
+num = int(input("Enter a number: "))
+if 0 <= num <= 9:
+    print("1-digit number")
+elif 10 <= num <= 99:
+    print("2-digit number")
+elif 100 <= num <= 999:
+    print("3-digit number")
+else:
+    print("More than 3 digits")
+
+# Q12: Take exam score and print grade (A, B, C, D, F).
+score = int(input("Enter exam score: "))
+if score >= 90:
+    print("Grade A")
+elif score >= 75:
+    print("Grade B")
+elif score >= 60:
+    print("Grade C")
+elif score >= 40:
+    print("Grade D")
+else:
+    print("Grade F")
+
+# Q13: Take a number and check if it lies between 10 and 50.
+num = int(input("Enter a number: "))
+if 10 <= num <= 50:
+    print("Number lies between 10 and 50")
+else:
+    print("Number is outside the range")
+
+# Q14: Take username and check admin/guest/invalid.
+username = input("Enter username: ")
+if username == "admin":
+    print("Admin Access")
+elif username == "guest":
+    print("Guest Access")
+else:
+    print("Invalid User")
+
+# Q15: Take password and check if it matches "python123".
+password = input("Enter password: ")
+if password == "python123":
+    print("Access Granted")
+else:
+    print("Access Denied")
+
+

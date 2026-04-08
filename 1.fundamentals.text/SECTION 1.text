@@ -1,0 +1,54 @@
+SECTION 1: THEORY QUESTIONS (1–10)
+1. What is a variable in Python?
+- A variable is a named storage used to hold data values.
+- Example: x = 10 stores integer 10 in variable x.
+
+2. What is dynamic typing in Python?
+- Python is dynamically typed, meaning you don’t need to declare the type of a variable.
+- The type is decided at runtime based on the value assigned.
+- Example:
+x = 10      # int
+x = "Hello" # str
+
+
+3. What is the difference between int, float, and str?
+- int → whole numbers (e.g., 5, -10)
+- float → decimal numbers (e.g., 3.14, -2.5)
+- str → sequence of characters (e.g., "Python")
+
+4. Is Python strongly typed or weakly typed? Explain briefly.
+- Python is strongly typed because it does not allow operations between incompatible types without explicit conversion.
+- Example: 5 + "5" → Error, must convert "5" to int first.
+
+5. What is type conversion? Why is it important?
+- Type conversion means changing one data type into another (e.g., int → float).
+- Important because it allows operations between different types safely.
+- Example: int("50") + 20.
+
+6. What is the difference between: int(5.9) and float(5)
+- int(5.9) → converts 5.9 to integer → 5 (decimal part removed).
+- float(5) → converts 5 to float → 5.0.
+
+7. What happens if you try to add an int and a str?
+- Python raises a TypeError because they are incompatible.
+- Example: 5 + "5" → Error.
+- Must convert string to int: 5 + int("5").
+
+8. What is the difference between: "5" and 5
+- "5" → string (text).
+- 5 → integer (numeric).
+- They are different data types.
+
+9. Can a variable change its data type after assignment? Explain with example.
+- Yes, because Python is dynamically typed.
+- Example:
+x = 10       # int
+x = "Hello"  # str
+
+
+10. What is the difference between:
+x = 10 and x = "10"
+- x = 10 → assigns integer value 10.
+- x = "10" → assigns string value "10".
+- Both look similar but are different data types.
+

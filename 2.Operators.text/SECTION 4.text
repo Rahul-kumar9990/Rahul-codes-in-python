@@ -1,0 +1,223 @@
+SECTION 4: ASSIGNMENT OPERATORS (30 Questions)
+1. Create a variable x = 10 and print it.
+# Create variable x = 10 and print
+x = 10
+print("x =", x)
+
+
+2. Take a number from user and assign it to variable num. Print num.
+# Input number and assign to num
+num = int(input("Enter a number: "))
+print("num =", num)
+
+
+3. Create x = 5. Increase x by 3 using +=. Print result.
+# Increase x by 3 using +=
+x = 5
+x += 3
+print("x =", x)
+
+
+4. Create salary = 50000. Increase it by 10000 using +=.
+# Increase salary by 10000 using +=
+salary = 50000
+salary += 10000
+print("Updated Salary =", salary)
+
+
+5. Create marks = 80. Reduce it by 5 using -=.
+# Reduce marks by 5 using -=
+marks = 80
+marks -= 5
+print("Marks =", marks)
+
+
+6. Take a number and double it using *=.
+# Input number and double it using *=
+num = int(input("Enter a number: "))
+num *= 2
+print("Result =", num)
+
+
+7. Take a float number and divide it by 2 using /=.
+# Input float and divide by 2 using /=
+num = float(input("Enter a float number: "))
+num /= 2
+print("Result =", num)
+
+
+8. Create x = 25. Apply //= 4. Print result.
+# Apply floor division using //=
+x = 25
+x //= 4
+print("x =", x)
+
+
+9. Create x = 29. Apply %= 5. Print remainder.
+# Apply modulus using %=
+x = 29
+x %= 5
+print("Remainder =", x)
+
+
+10. Create x = 2. Apply **= 3. Print result.
+# Apply power using **=
+x = 2
+x **= 3
+print("x =", x)
+
+
+11. Take two numbers a and b. Add b into a using +=.
+# Input two numbers and add b into a
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+a += b
+print("a =", a)
+
+
+12. Take price = 1000. Apply 10% discount using -=.
+# Apply 10% discount using -=
+price = 1000
+price -= price * 0.10
+print("Discounted Price =", price)
+
+
+13. Create count = 0. Increase it 5 times using += inside code.
+# Increase count 5 times using +=
+count = 0
+for i in range(5):
+    count += 1
+print("Count =", count)
+
+
+14. Create total = 100. Multiply by 1.5 using *=.
+# Multiply total by 1.5 using *=
+total = 100
+total *= 1.5
+print("Total =", total)
+
+
+15. Take a number and reduce it by half using /= 2.
+# Input number and reduce by half using /=
+num = float(input("Enter a number: "))
+num /= 2
+print("Half =", num)
+
+
+16. Create x = 50. Apply -= 20 and print result.
+# Apply subtraction using -=
+x = 50
+x -= 20
+print("x =", x)
+
+
+17. Take number from input and apply %= 2. Print result.
+# Input number and apply %= 2
+num = int(input("Enter a number: "))
+num %= 2
+print("Result =", num)
+
+
+18. Create value = 3. Apply **= 4. Print result.
+# Apply power using **=
+value = 3
+value **= 4
+print("Value =", value)
+
+
+19. Create balance = 2000. Add 500, subtract 300 using assignment operators.
+# Update balance using += and -=
+balance = 2000
+balance += 500
+balance -= 300
+print("Balance =", balance)
+
+
+20. Take a number and increment it by 1 using +=.
+# Input number and increment by 1
+num = int(input("Enter a number: "))
+num += 1
+print("Result =", num)
+
+
+21. Take a number and decrement it by 1 using -=.
+# Input number and decrement by 1
+num = int(input("Enter a number: "))
+num -= 1
+print("Result =", num)
+
+
+22. Create x = 100. Apply //= 3. Print result.
+# Apply floor division using //=
+x = 100
+x //= 3
+print("x =", x)
+
+
+23. Take a float number and apply *= 2.5.
+# Input float and multiply by 2.5 using *=
+num = float(input("Enter a float number: "))
+num *= 2.5
+print("Result =", num)
+
+
+24. Create x = 81. Apply **= 0.5 (square root).
+# Apply square root using **=
+x = 81
+x **= 0.5
+print("Square Root =", x)
+
+
+25. Take a number and update it three times using +=.
+# Input number and update three times using +=
+num = int(input("Enter a number: "))
+num += 1
+num += 2
+num += 3
+print("Updated Number =", num)
+
+
+26. Create amount = 10000. Increase by 5% using *=.
+# Increase amount by 5% using *=
+amount = 10000
+amount *= 1.05
+print("Amount =", amount)
+
+
+27. Create x = 15. Apply %= 4 and then += 2.
+# Apply modulus and then addition
+x = 15
+x %= 4
+x += 2
+print("x =", x)
+
+
+28. Take a number and apply /= 3, then *= 2.
+# Input number and apply /= then *=
+num = float(input("Enter a number: "))
+num /= 3
+num *= 2
+print("Result =", num)
+
+
+29. Create x = 7. Apply **= 2 and then -= 10.
+# Apply power and then subtraction
+x = 7
+x **= 2
+x -= 10
+print("x =", x)
+
+
+30. Take a number and apply a chain of operations using assignment operators.
+# Input number and apply chain of operations
+num = int(input("Enter a number: "))
+num += 5
+num *= 2
+num //= 3
+num -= 4
+num **= 2
+print("Final Result =", num)
+
+
+
+

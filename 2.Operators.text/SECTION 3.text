@@ -1,0 +1,191 @@
+SECTION 3: LOGICAL OPERATORS (30 Questions)
+1. Take age and check if age > 18 and age < 60.
+# Input age and check if between 18 and 60
+age = int(input("Enter age: "))
+print("Age between 18 and 60?", age > 18 and age < 60)
+
+
+2. Take marks and check if marks >= 35 and marks <= 100.
+# Input marks and check if valid range
+marks = int(input("Enter marks: "))
+print("Marks between 35 and 100?", marks >= 35 and marks <= 100)
+
+
+3. Take salary and check if salary > 30000 and experience > 2.
+# Input salary and experience, check condition
+salary = float(input("Enter salary: "))
+exp = int(input("Enter years of experience: "))
+print("Eligible?", salary > 30000 and exp > 2)
+
+
+4. Take two numbers and check if both are positive.
+# Input two numbers and check if both positive
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Both positive?", a > 0 and b > 0)
+
+
+5. Take a number and check if it is between 10 and 50.
+# Input number and check range
+n = int(input("Enter a number: "))
+print("Between 10 and 50?", n > 10 and n < 50)
+
+
+6. Take username and password and validate both.
+# Input username and password, validate
+user = input("Enter username: ")
+pwd = input("Enter password: ")
+print("Valid?", user == "admin" and pwd == "1234")
+
+
+7. Take age and check if age < 18 or age > 60.
+# Input age and check condition
+age = int(input("Enter age: "))
+print("Age < 18 or > 60?", age < 18 or age > 60)
+
+
+8. Take marks and check if marks < 35 or marks > 100.
+# Input marks and check invalid range
+marks = int(input("Enter marks: "))
+print("Marks < 35 or > 100?", marks < 35 or marks > 100)
+
+
+9. Take temperature and check if temp > 40 or temp < 0.
+# Input temperature and check extreme condition
+temp = float(input("Enter temperature: "))
+print("Temp > 40 or < 0?", temp > 40 or temp < 0)
+
+
+10. Take two numbers and check if at least one is negative.
+# Input two numbers and check if one negative
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("At least one negative?", a < 0 or b < 0)
+
+
+11. Take number and check if it is not zero.
+# Input number and check not zero
+n = int(input("Enter a number: "))
+print("Not Zero?", not (n == 0))
+
+
+12. Take age and check if not (age < 18).
+# Input age and check not less than 18
+age = int(input("Enter age: "))
+print("Not under 18?", not (age < 18))
+
+
+13. Take a number and check if it is even and greater than 10.
+# Input number and check even and > 10
+n = int(input("Enter a number: "))
+print("Even and > 10?", n % 2 == 0 and n > 10)
+
+
+14. Take salary and check if salary > 50000 or department == "IT".
+# Input salary and department, check condition
+salary = float(input("Enter salary: "))
+dept = input("Enter department: ")
+print("Condition met?", salary > 50000 or dept == "IT")
+
+
+15. Take two strings and check if both are equal and not empty.
+# Input two strings and check equality and non-empty
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+print("Equal and not empty?", s1 == s2 and s1 != "" and s2 != "")
+
+
+16. Take number and check if it is divisible by 3 and 5.
+# Input number and check divisibility by 3 and 5
+n = int(input("Enter a number: "))
+print("Divisible by 3 and 5?", n % 3 == 0 and n % 5 == 0)
+
+
+17. Take number and check if it is divisible by 3 or 5.
+# Input number and check divisibility by 3 or 5
+n = int(input("Enter a number: "))
+print("Divisible by 3 or 5?", n % 3 == 0 or n % 5 == 0)
+
+
+18. Take marks and check if marks >= 90 or marks < 40.
+# Input marks and check condition
+marks = int(input("Enter marks: "))
+print("Marks >= 90 or < 40?", marks >= 90 or marks < 40)
+
+
+19. Take password and check if it is not "1234".
+# Input password and check not equal
+pwd = input("Enter password: ")
+print("Password not '1234'?", pwd != "1234")
+
+
+20. Take two numbers and check if both are not equal to zero.
+# Input two numbers and check both not zero
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Both not zero?", a != 0 and b != 0)
+
+
+21. Take age and check if age >= 18 and age <= 25.
+# Input age and check range
+age = int(input("Enter age: "))
+print("Age between 18 and 25?", age >= 18 and age <= 25)
+
+
+22. Take temperature and check safe range (20–30).
+# Input temperature and check safe range
+temp = float(input("Enter temperature: "))
+print("Safe range?", temp >= 20 and temp <= 30)
+
+
+23. Take salary and check if salary > 40000 and not salary > 100000.
+# Input salary and check condition
+salary = float(input("Enter salary: "))
+print("Condition met?", salary > 40000 and not (salary > 100000))
+
+
+24. Take number and check if not (number > 0).
+# Input number and check not positive
+n = int(input("Enter a number: "))
+print("Not positive?", not (n > 0))
+
+
+25. Take username and check if username == "admin" or username == "root".
+# Input username and check condition
+user = input("Enter username: ")
+print("Admin or Root?", user == "admin" or user == "root")
+
+
+26. Take number and check if it is odd and greater than 50.
+# Input number and check odd and > 50
+n = int(input("Enter a number: "))
+print("Odd and > 50?", n % 2 != 0 and n > 50)
+
+
+27. Take number and check if it is positive or zero.
+# Input number and check positive or zero
+n = int(input("Enter a number: "))
+print("Positive or Zero?", n >= 0)
+
+
+28. Take marks and check if marks >= 75 and marks < 90.
+# Input marks and check range
+marks = int(input("Enter marks: "))
+print("Marks between 75 and 90?", marks >= 75 and marks < 90)
+
+
+29. Take two inputs and check if both are same and greater than 10.
+# Input two numbers and check equality and > 10
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Same and > 10?", a == b and a > 10)
+
+
+30. Take number and check if it is not between 10 and 20.
+# Input number and check not in range
+n = int(input("Enter a number: "))
+print("Not between 10 and 20?", not (n > 10 and n < 20))
+
+
+
+

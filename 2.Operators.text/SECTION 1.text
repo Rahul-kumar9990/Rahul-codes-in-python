@@ -1,0 +1,215 @@
+1. Take two integers from user and print their sum.
+# Input two integers and print their sum
+a = int(input("Enter first integer: "))
+b = int(input("Enter second integer: "))
+print("Sum =", a + b)
+
+
+2. Take two integers and print subtraction result.
+# Input two integers and print subtraction result
+a = int(input("Enter first integer: "))
+b = int(input("Enter second integer: "))
+print("Difference =", a - b)
+
+
+3. Take two floats and print multiplication result.
+# Input two floats and print multiplication result
+x = float(input("Enter first float: "))
+y = float(input("Enter second float: "))
+print("Multiplication =", x * y)
+
+
+4. Take two numbers and print division result.
+# Input two numbers and print division result
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+print("Division =", a / b)
+
+
+5. Take two integers and print floor division result.
+# Input two integers and print floor division result
+a = int(input("Enter first integer: "))
+b = int(input("Enter second integer: "))
+print("Floor Division =", a // b)
+
+
+6. Take two integers and print remainder using %.
+# Input two integers and print remainder using %
+a = int(input("Enter first integer: "))
+b = int(input("Enter second integer: "))
+print("Remainder =", a % b)
+
+
+7. Take a number and print its square using **.
+# Input a number and print its square
+n = int(input("Enter a number: "))
+print("Square =", n ** 2)
+
+
+8. Take a number and print its cube.
+# Input a number and print its cube
+n = int(input("Enter a number: "))
+print("Cube =", n ** 3)
+
+
+9. Take two numbers and calculate average.
+# Input two numbers and calculate average
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+print("Average =", (a + b) / 2)
+
+
+10. Take length and width from user and calculate area.
+# Input length and width and calculate area of rectangle
+length = float(input("Enter length: "))
+width = float(input("Enter width: "))
+print("Area =", length * width)
+
+
+11. Take radius and calculate area of circle (3.14 * r * r).
+# Input radius and calculate area of circle
+r = float(input("Enter radius: "))
+print("Area of Circle =", 3.14 * r * r)
+
+
+12. Take principal, rate, time and calculate simple interest.
+# Input principal, rate, time and calculate simple interest
+p = float(input("Enter principal: "))
+r = float(input("Enter rate: "))
+t = float(input("Enter time: "))
+print("Simple Interest =", (p * r * t) / 100)
+
+
+13. Take total marks of 5 subjects and calculate percentage.
+# Input marks of 5 subjects and calculate percentage
+marks = []
+for i in range(5):
+    marks.append(float(input(f"Enter marks of subject {i+1}: ")))
+total = sum(marks)
+print("Percentage =", (total / 500) * 100)
+
+
+14. Take salary and increase it by 10%.
+# Input salary and increase it by 10%
+salary = float(input("Enter salary: "))
+salary += salary * 0.10
+print("Updated Salary =", salary)
+
+
+15. Take a number and divide it by 2 using /= operator.
+# Input a number and divide it by 2 using /= operator
+num = float(input("Enter a number: "))
+num /= 2
+print("Result =", num)
+
+
+16. Take a number and multiply it by 5 using *= operator.
+# Input a number and multiply it by 5 using *= operator
+num = float(input("Enter a number: "))
+num *= 5
+print("Result =", num)
+
+
+17. Take two numbers and swap them using arithmetic operators.
+# Swap two numbers using arithmetic operators
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+a = a + b
+b = a - b
+a = a - b
+print("After swapping: a =", a, "b =", b)
+
+
+18. Take a number and check if it is even using %.
+# Check if a number is even using %
+n = int(input("Enter a number: "))
+print("Even?", n % 2 == 0)
+
+
+19. Take a number and check if it is odd using %.
+# Check if a number is odd using %
+n = int(input("Enter a number: "))
+print("Odd?", n % 2 != 0)
+
+
+20. Take total seconds and convert into minutes (use // and %).
+# Convert seconds into minutes and seconds
+seconds = int(input("Enter total seconds: "))
+minutes = seconds // 60
+remaining = seconds % 60
+print("Minutes =", minutes, "Seconds =", remaining)
+
+
+21. Take temperature in Celsius and convert to Fahrenheit.
+# Convert Celsius to Fahrenheit
+c = float(input("Enter temperature in Celsius: "))
+f = (c * 9/5) + 32
+print("Fahrenheit =", f)
+
+
+22. Take two numbers and print their power result.
+# Input two numbers and print power result
+base = float(input("Enter base: "))
+exp = float(input("Enter exponent: "))
+print("Power =", base ** exp)
+
+
+23. Take price and discount %, calculate final price.
+# Calculate final price after discount
+price = float(input("Enter price: "))
+discount = float(input("Enter discount %: "))
+final_price = price - (price * discount / 100)
+print("Final Price =", final_price)
+
+
+24. Take a 3-digit number and find sum of digits using % and //.
+# Find sum of digits of a 3-digit number
+num = int(input("Enter a 3-digit number: "))
+d1 = num % 10
+d2 = (num // 10) % 10
+d3 = num // 100
+print("Sum of digits =", d1 + d2 + d3)
+
+
+25. Take two numbers and print remainder without using % (use formula).
+# Find remainder without using % operator
+a = int(input("Enter dividend: "))
+b = int(input("Enter divisor: "))
+remainder = a - (a // b) * b
+print("Remainder =", remainder)
+
+
+26. Take a number and print half of it.
+# Print half of a number
+n = float(input("Enter a number: "))
+print("Half =", n / 2)
+
+
+27. Take base and height and calculate area of triangle.
+# Calculate area of triangle
+base = float(input("Enter base: "))
+height = float(input("Enter height: "))
+print("Area of Triangle =", 0.5 * base * height)
+
+
+28. Take a number and print its square root using ** 0.5.
+# Print square root using **0.5
+n = float(input("Enter a number: "))
+print("Square Root =", n ** 0.5)
+
+
+29. Take monthly salary and calculate yearly salary.
+# Calculate yearly salary from monthly salary
+monthly = float(input("Enter monthly salary: "))
+print("Yearly Salary =", monthly * 12)
+
+
+30. Take total bill and number of people, calculate per person share.
+# Calculate per person share of bill
+bill = float(input("Enter total bill: "))
+people = int(input("Enter number of people: "))
+print("Per Person Share =", bill / people)
+
+
+
+

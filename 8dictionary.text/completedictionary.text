@@ -1,0 +1,209 @@
+# =========================
+# EASY LEVEL (1–10)
+# =========================
+
+# Q1: Create Dictionary
+names, ages = ["Amit","Riya"], [25,30]
+d = dict(zip(names, ages))
+print(d)
+
+# Q2: Access Value
+d, key = {"a":10,"b":20}, "b"
+print(d[key])
+
+# Q3: Check Key Exists
+d, key = {"x":1,"y":2}, "x"
+print(key in d)
+
+# Q4: Count Keys
+d = {"a":1,"b":2,"c":3}
+print(len(d))
+
+# Q5: Sum of Values
+d = {"a":10,"b":20,"c":30}
+print(sum(d.values()))
+
+# Q6: Update Value
+d, key, new_value = {"a":10}, "a", 50
+d[key] = new_value
+print(d)
+
+# Q7: Delete Key
+d, key = {"a":10,"b":20}, "a"
+del d[key]
+print(d)
+
+# Q8: Get All Keys
+d = {"a":1,"b":2}
+print(list(d.keys()))
+
+# Q9: Get All Values
+d = {"a":1,"b":2}
+print(list(d.values()))
+
+# Q10: Merge Two Dictionaries
+d1, d2 = {"a":1}, {"b":2}
+merged = {**d1, **d2}
+print(merged)
+
+
+# =========================
+# MEDIUM LEVEL (11–20)
+# =========================
+
+# Q11: Character Frequency
+s = "banana"
+freq = {}
+for ch in s:
+    freq[ch] = freq.get(ch,0)+1
+print(freq)
+
+# Q12: Word Frequency
+s = "I love Python I love coding"
+words = s.split()
+freq = {}
+for w in words:
+    freq[w] = freq.get(w,0)+1
+print(freq)
+
+# Q13: Invert Dictionary
+d = {"a":1,"b":2}
+inverted = {v:k for k,v in d.items()}
+print(inverted)
+
+# Q14: Find Key with Maximum Value
+d = {"a":10,"b":25,"c":5}
+print(max(d, key=d.get))
+
+# Q15: Sort Dictionary by Keys
+d = {"b":2,"a":1,"c":3}
+print(dict(sorted(d.items())))
+
+# Q16: Sort Dictionary by Values
+d = {"a":3,"b":1,"c":2}
+print(dict(sorted(d.items(), key=lambda x:x[1])))
+
+# Q17: Group Elements by First Letter
+words = ["apple","ant","bat","ball"]
+group = {}
+for w in words:
+    group.setdefault(w[0], []).append(w)
+print(group)
+
+# Q18: Count Occurrence of Each Element in List
+nums = [1,2,2,3,1]
+freq = {}
+for n in nums:
+    freq[n] = freq.get(n,0)+1
+print(freq)
+
+# Q19: Remove Keys with Specific Value
+d, value = {"a":10,"b":20,"c":10}, 10
+filtered = {k:v for k,v in d.items() if v != value}
+print(filtered)
+
+# Q20: Nested Dictionary Access
+d = {"user": {"name":"Amit","age":25}}
+print(d["user"]["age"])
+
+
+# =========================
+# HARD LEVEL (21–30)
+# =========================
+
+# Q21: Two Sum Problem
+nums, target = [2,7,11,15], 9
+lookup = {}
+for i, num in enumerate(nums):
+    if target-num in lookup:
+        print([lookup[target-num], i])
+        break
+    lookup[num] = i
+
+# Q22: Group Anagrams
+words = ["eat","tea","tan","ate","nat","bat"]
+groups = {}
+for w in words:
+    key = "".join(sorted(w))
+    groups.setdefault(key, []).append(w)
+print(list(groups.values()))
+
+# Q23: First Non-Repeating Character
+s = "leetcode"
+freq = {}
+for i,ch in enumerate(s):
+    freq[ch] = freq.get(ch,0)+1
+for i,ch in enumerate(s):
+    if freq[ch] == 1:
+        print(i)
+        break
+
+# Q24: Subarray Sum Equals K
+nums, k = [1,1,1], 2
+count, prefix, sums = 0, 0, {0:1}
+for num in nums:
+    prefix += num
+    count += sums.get(prefix-k,0)
+    sums[prefix] = sums.get(prefix,0)+1
+print(count)
+
+# Q25: Merge Two Dictionaries and Sum Common Keys
+d1, d2 = {"a":1,"b":2}, {"b":3,"c":4}
+merged = d1.copy()
+for k,v in d2.items():
+    merged[k] = merged.get(k,0)+v
+print(merged)
+
+# Q26: Check if Two Dictionaries Are Equal
+d1, d2 = {"a":1,"b":2}, {"b":2,"a":1}
+print(d1 == d2)
+
+# Q27: Find Duplicate Values
+d = {"a":1,"b":2,"c":1}
+values = list(d.values())
+duplicates = [v for v in set(values) if values.count(v) > 1]
+print(duplicates)
+
+# Q28: Flatten Nested Dictionary
+d = {"a": {"b":1}}
+flat = {}
+for k,v in d.items():
+    if isinstance(v, dict):
+        for subk, subv in v.items():
+            flat[f"{k}.{subk}"] = subv
+    else:
+        flat[k] = v
+print(flat)
+
+# Q29: Find Top K Frequent Elements
+nums, k = [1,1,1,2,2,3], 2
+freq = {}
+for n in nums:
+    freq[n] = freq.get(n,0)+1
+top = sorted(freq, key=freq.get, reverse=True)[:k]
+print(top)
+
+# Q30: LRU Cache Simulation (Basic Version)
+capacity = 2
+cache = {}
+order = []
+operations = ["put 1 1","put 2 2","get 1"]
+for op in operations:
+    parts = op.split()
+    if parts[0] == "put":
+        key, value = parts[1], parts[2]
+        if key in cache:
+            order.remove(key)
+        elif len(cache) == capacity:
+            oldest = order.pop(0)
+            del cache[oldest]
+        cache[key] = value
+        order.append(key)
+    elif parts[0] == "get":
+        key = parts[1]
+        if key in cache:
+            order.remove(key)
+            order.append(key)
+            print(cache[key])
+        else:
+            print(-1)

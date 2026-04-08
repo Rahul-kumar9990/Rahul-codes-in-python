@@ -1,0 +1,139 @@
+# =========================
+# EASY LEVEL (1–10)
+# =========================
+
+# Q1: Squares of Numbers
+nums = [1,2,3,4]
+print([x**2 for x in nums])
+
+# Q2: Even Numbers
+nums = [1,2,3,4,5,6]
+print([x for x in nums if x%2==0])
+
+# Q3: Odd Numbers
+nums = [1,2,3,4,5]
+print([x for x in nums if x%2!=0])
+
+# Q4: Convert to Uppercase
+words = ["python","java"]
+print([w.upper() for w in words])
+
+# Q5: Length of Each Word
+words = ["hi","world"]
+print([len(w) for w in words])
+
+# Q6: Multiply by 2
+nums = [1,2,3]
+print([x*2 for x in nums])
+
+# Q7: Filter Greater Than 10
+nums = [5,12,7,18]
+print([x for x in nums if x>10])
+
+# Q8: Extract First Letter
+words = ["apple","banana","cat"]
+print([w[0] for w in words])
+
+# Q9: Convert Strings to Integers
+nums = ["1","2","3"]
+print([int(x) for x in nums])
+
+# Q10: Remove Empty Strings
+words = ["a","","b",""]
+print([w for w in words if w!=""])
+
+
+# =========================
+# MEDIUM LEVEL (11–20)
+# =========================
+
+# Q11: Squares of Even Numbers
+nums = [1,2,3,4]
+print([x**2 for x in nums if x%2==0])
+
+# Q12: Flatten 2D List
+matrix = [[1,2],[3,4]]
+print([x for row in matrix for x in row])
+
+# Q13: Numbers Divisible by 3 and 5
+nums = list(range(1,31))
+print([x for x in nums if x%3==0 and x%5==0])
+
+# Q14: Replace Negatives with 0
+nums = [-2,5,-1,7]
+print([x if x>=0 else 0 for x in nums])
+
+# Q15: Filter Palindrome Strings
+words = ["madam","hello","level"]
+print([w for w in words if w==w[::-1]])
+
+# Q16: Create (Number, Square) Pairs
+nums = [1,2,3]
+print([(x,x**2) for x in nums])
+
+# Q17: Extract Digits from String
+s = "a1b2c3"
+print([ch for ch in s if ch.isdigit()])
+
+# Q18: Cartesian Product of Two Lists
+a, b = [1,2], ["a","b"]
+print([(x,y) for x in a for y in b])
+
+# Q19: Remove Duplicates (Preserve Order)
+nums = [1,2,2,3,1]
+seen = set()
+result = [x for x in nums if not (x in seen or seen.add(x))]
+print(result)
+
+# Q20: Convert to Boolean Values
+nums = [0,1,"","hi"]
+print([bool(x) for x in nums])
+
+
+# =========================
+# HARD LEVEL (21–30)
+# =========================
+
+# Q21: Generate Prime Numbers up to N
+n = 10
+primes = [x for x in range(2,n+1) if all(x%p!=0 for p in range(2,int(x**0.5)+1))]
+print(primes)
+
+# Q22: Matrix Transpose Using Comprehension
+matrix = [[1,2,3],[4,5,6]]
+transpose = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+print(transpose)
+
+# Q23: Generate All Substrings
+s = "abc"
+subs = [s[i:j] for i in range(len(s)) for j in range(i+1,len(s)+1)]
+print(subs)
+
+# Q24: Flatten Nested List with Condition (only even numbers)
+matrix = [[1,2],[3,4]]
+print([x for row in matrix for x in row if x%2==0])
+
+# Q25: Create Dictionary from Two Lists
+keys, values = ["a","b"], [1,2]
+print({k:v for k,v in zip(keys,values)})
+
+# Q26: Filter Words by Length (>3)
+words = ["hi","hello","world"]
+print([w for w in words if len(w)>3])
+
+# Q27: Create List of Tuples Where Sum > 5
+a, b = [1,2,3], [3,4]
+print([(x,y) for x in a for y in b if x+y>5])
+
+# Q28: Generate Multiplication Table (Nested Comprehension)
+n = 3
+table = [[i*j for j in range(1,n+1)] for i in range(1,n+1)]
+print(table)
+
+# Q29: Convert Sentence to ASCII Values
+s = "AB"
+print([ord(ch) for ch in s])
+
+# Q30: Replace Vowels with '*' Using Comprehension
+s = "hello"
+print("".join([ch if ch.lower() not in "aeiou" else "*" for ch in s]))

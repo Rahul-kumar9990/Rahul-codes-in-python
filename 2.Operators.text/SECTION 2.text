@@ -1,0 +1,201 @@
+SECTION 2: COMPARISON OPERATORS (30 Questions)
+1. Take two integers and check if they are equal.
+# Input two integers and check if they are equal
+a = int(input("Enter first integer: "))
+b = int(input("Enter second integer: "))
+print("Equal?", a == b)
+
+
+2. Take two numbers and check if first is greater than second.
+# Input two numbers and check if first is greater
+x = float(input("Enter first number: "))
+y = float(input("Enter second number: "))
+print("First > Second?", x > y)
+
+
+3. Take age and check if age is greater than 18.
+# Input age and check if greater than 18
+age = int(input("Enter age: "))
+print("Age > 18?", age > 18)
+
+
+4. Take salary and check if salary is at least 50000.
+# Input salary and check if >= 50000
+salary = float(input("Enter salary: "))
+print("Salary >= 50000?", salary >= 50000)
+
+
+5. Take two numbers and check if they are not equal.
+# Input two numbers and check inequality
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+print("Not Equal?", a != b)
+
+
+6. Take marks and check if marks are less than 35.
+# Input marks and check if < 35
+marks = int(input("Enter marks: "))
+print("Marks < 35?", marks < 35)
+
+
+7. Take temperature and check if it is greater than 30.
+# Input temperature and check > 30
+temp = float(input("Enter temperature: "))
+print("Temperature > 30?", temp > 30)
+
+
+8. Take two floats and compare them.
+# Input two floats and compare equality
+x = float(input("Enter first float: "))
+y = float(input("Enter second float: "))
+print("Equal?", x == y)
+
+
+9. Take a number and check if it is zero.
+# Input number and check if zero
+n = int(input("Enter a number: "))
+print("Is Zero?", n == 0)
+
+
+10. Take password input and check if it equals "admin".
+# Input password and check if equals "admin"
+pwd = input("Enter password: ")
+print("Password correct?", pwd == "admin")
+
+
+11. Take username and check if it equals "Sagar".
+# Input username and check if equals "Sagar"
+user = input("Enter username: ")
+print("Username correct?", user == "Sagar")
+
+
+12. Take a number and check if it is positive.
+# Input number and check if positive
+n = int(input("Enter a number: "))
+print("Positive?", n > 0)
+
+
+13. Take a number and check if it is negative.
+# Input number and check if negative
+n = int(input("Enter a number: "))
+print("Negative?", n < 0)
+
+
+14. Take two numbers and check if first is less than or equal to second.
+# Input two numbers and check <= condition
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+print("First <= Second?", a <= b)
+
+
+15. Take price and check if it is greater than 1000.
+# Input price and check > 1000
+price = float(input("Enter price: "))
+print("Price > 1000?", price > 1000)
+
+
+16. Take two strings and compare if they are equal.
+# Input two strings and check equality
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+print("Strings Equal?", s1 == s2)
+
+
+17. Take a number and check if it is exactly 100.
+# Input number and check if == 100
+n = int(input("Enter a number: "))
+print("Equal to 100?", n == 100)
+
+
+18. Take age and check if age is not 60.
+# Input age and check != 60
+age = int(input("Enter age: "))
+print("Age != 60?", age != 60)
+
+
+19. Take two numbers and check which one is bigger.
+# Input two numbers and check bigger
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+if a > b:
+    print("First is bigger")
+elif b > a:
+    print("Second is bigger")
+else:
+    print("Both are equal")
+
+
+20. Take exam score and check if score >= 90.
+# Input exam score and check >= 90
+score = int(input("Enter exam score: "))
+print("Score >= 90?", score >= 90)
+
+
+21. Take two float numbers and compare equality.
+# Input two floats and check equality
+x = float(input("Enter first float: "))
+y = float(input("Enter second float: "))
+print("Equal?", x == y)
+
+
+22. Take number and check if it is less than 10.
+# Input number and check < 10
+n = int(input("Enter a number: "))
+print("Less than 10?", n < 10)
+
+
+23. Take two numbers and print True if both are same.
+# Input two numbers and check equality
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print(a == b)
+
+
+24. Take salary and check if it is below 20000.
+# Input salary and check < 20000
+salary = float(input("Enter salary: "))
+print("Salary < 20000?", salary < 20000)
+
+
+25. Take temperature and check if it is <= 0.
+# Input temperature and check <= 0
+temp = float(input("Enter temperature: "))
+print("Temperature <= 0?", temp <= 0)
+
+
+26. Take a number and check if it is not zero.
+# Input number and check != 0
+n = int(input("Enter a number: "))
+print("Not Zero?", n != 0)
+
+
+27. Take two strings and check inequality.
+# Input two strings and check inequality
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+print("Not Equal?", s1 != s2)
+
+
+28. Take marks and check if marks > 50.
+# Input marks and check > 50
+marks = int(input("Enter marks: "))
+print("Marks > 50?", marks > 50)
+
+
+29. Take two numbers and check >= condition.
+# Input two numbers and check >= condition
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+print("First >= Second?", a >= b)
+
+
+30. Take number and compare with 500.
+# Input number and compare with 500
+n = int(input("Enter a number: "))
+print("Greater than 500?", n > 500)
+print("Equal to 500?", n == 500)
+print("Less than 500?", n < 500)
+
+
+
+

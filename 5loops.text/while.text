@@ -1,0 +1,278 @@
+# =========================
+# EASY LEVEL (1–10)
+# =========================
+
+# Q1: Print numbers from 1 to N
+N = int(input("Enter N: "))
+i = 1
+while i <= N:
+    print(i, end="")
+    i += 1
+
+# Q2: Print numbers from N to 1
+N = int(input("\nEnter N: "))
+i = N
+while i >= 1:
+    print(i, end="")
+    i -= 1
+
+# Q3: Print all even numbers up to N
+N = int(input("\nEnter N: "))
+i = 2
+while i <= N:
+    print(i, end="")
+    i += 2
+
+# Q4: Print all odd numbers up to N
+N = int(input("\nEnter N: "))
+i = 1
+while i <= N:
+    print(i, end="")
+    i += 2
+
+# Q5: Find sum from 1 to N
+N = int(input("\nEnter N: "))
+i, total = 1, 0
+while i <= N:
+    total += i
+    i += 1
+print("Sum:", total)
+
+# Q6: Print multiplication table of N
+N = int(input("Enter N: "))
+i = 1
+while i <= 10:
+    print(f"{N}x{i}={N*i}")
+    i += 1
+
+# Q7: Count digits in a number
+N = int(input("Enter N: "))
+count = 0
+while N > 0:
+    count += 1
+    N //= 10
+print("Digit count:", count)
+
+# Q8: Reverse a number
+N = int(input("Enter N: "))
+rev = 0
+while N > 0:
+    rev = rev*10 + N%10
+    N //= 10
+print("Reversed:", rev)
+
+# Q9: Sum of digits
+N = int(input("Enter N: "))
+sum_digits = 0
+while N > 0:
+    sum_digits += N % 10
+    N //= 10
+print("Sum of digits:", sum_digits)
+
+# Q10: Print factorial of N
+N = int(input("Enter N: "))
+fact, i = 1, 1
+while i <= N:
+    fact *= i
+    i += 1
+print("Factorial:", fact)
+
+
+# =========================
+# MEDIUM LEVEL (11–20)
+# =========================
+
+# Q11: Check if number is palindrome
+N = int(input("Enter N: "))
+temp, rev = N, 0
+while temp > 0:
+    rev = rev*10 + temp%10
+    temp //= 10
+print("True" if rev == N else "False")
+
+# Q12: Check if number is Armstrong (3-digit)
+N = int(input("Enter N: "))
+temp, sum_cubes = N, 0
+while temp > 0:
+    digit = temp % 10
+    sum_cubes += digit**3
+    temp //= 10
+print("True" if sum_cubes == N else "False")
+
+# Q13: Print Fibonacci series up to N terms
+N = int(input("Enter N: "))
+a, b, count = 0, 1, 0
+while count < N:
+    print(a, end="")
+    a, b = b, a+b
+    count += 1
+
+# Q14: Check if number is prime
+N = int(input("\nEnter N: "))
+i, is_prime = 2, True
+while i <= N//2:
+    if N % i == 0:
+        is_prime = False
+        break
+    i += 1
+print("True" if is_prime and N > 1 else "False")
+
+# Q15: Print all factors of N
+N = int(input("Enter N: "))
+i = 1
+while i <= N:
+    if N % i == 0:
+        print(i, end="")
+    i += 1
+
+# Q16: Find largest digit in number
+N = int(input("\nEnter N: "))
+largest = 0
+while N > 0:
+    digit = N % 10
+    if digit > largest:
+        largest = digit
+    N //= 10
+print("Largest digit:", largest)
+
+# Q17: Count frequency of a digit in number
+N = int(input("Enter N: "))
+d = int(input("Enter digit to count: "))
+count = 0
+while N > 0:
+    if N % 10 == d:
+        count += 1
+    N //= 10
+print("Frequency:", count)
+
+# Q18: Calculate power without using ** operator
+base = int(input("Enter base: "))
+power = int(input("Enter power: "))
+result, i = 1, 0
+while i < power:
+    result *= base
+    i += 1
+print("Result:", result)
+
+# Q19: Convert decimal to binary
+N = int(input("Enter decimal number: "))
+binary = ""
+while N > 0:
+    binary = str(N % 2) + binary
+    N //= 2
+print("Binary:", binary)
+
+# Q20: Print star pattern (increasing)
+N = int(input("Enter N: "))
+i = 1
+while i <= N:
+    print("*"*i)
+    i += 1
+
+
+# =========================
+# HARD LEVEL (21–30)
+# =========================
+
+# Q21: Print reverse pattern
+N = int(input("Enter N: "))
+i = N
+while i >= 1:
+    print("*"*i)
+    i -= 1
+
+# Q22: Print centered pyramid
+N = int(input("Enter N: "))
+i = 1
+while i <= N:
+    print(" "*(N-i) + "*"*(2*i-1))
+    i += 1
+
+# Q23: Print number triangle
+N = int(input("Enter N: "))
+i = 1
+while i <= N:
+    j = 1
+    while j <= i:
+        print(j, end="")
+        j += 1
+    print()
+    i += 1
+
+# Q24: Print number palindrome pattern
+N = int(input("Enter N: "))
+i = 1
+while i <= N:
+    j = 1
+    while j <= i:
+        print(j, end="")
+        j += 1
+    j = i-1
+    while j >= 1:
+        print(j, end="")
+        j -= 1
+    print()
+    i += 1
+
+# Q25: Find GCD of two numbers
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+while b != 0:
+    a, b = b, a % b
+print("GCD:", a)
+
+# Q26: Find LCM using while
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+lcm = max(a, b)
+while True:
+    if lcm % a == 0 and lcm % b == 0:
+        break
+    lcm += 1
+print("LCM:", lcm)
+
+# Q27: Keep asking user input until they enter 0
+while True:
+    num = int(input("Enter number (0 to stop): "))
+    if num == 0:
+        print("Program stopped")
+        break
+
+# Q28: Password validation loop
+password = "python123"
+while True:
+    entered = input("Enter password: ")
+    if entered == password:
+        print("Access Granted")
+        break
+    else:
+        print("Wrong password, try again.")
+
+# Q29: Banking simulation
+balance = float(input("Enter initial balance: "))
+while balance > 0:
+    withdraw = float(input("Enter withdrawal amount: "))
+    if withdraw <= balance:
+        balance -= withdraw
+        print("Remaining balance:", balance)
+    else:
+        print("Insufficient balance")
+        break
+
+# Q30: Menu-driven calculator
+while True:
+    print("\nMenu:\n1. Add\n2. Subtract\n3. Multiply\n4. Exit")
+    choice = int(input("Enter choice: "))
+    if choice == 4:
+        print("Exiting...")
+        break
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    if choice == 1:
+        print("Result:", a+b)
+    elif choice == 2:
+        print("Result:", a-b)
+    elif choice == 3:
+        print("Result:", a*b)
+    else:
+        print("Invalid choice")
